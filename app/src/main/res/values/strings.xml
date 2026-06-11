@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Appollo-Sales</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="no_internet_desc">Please check your network settings and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="open_settings">Wi-Fi Settings</string>
+    <string name="continue_offline">Continue Offline</string>
+    <string name="exit_confirmation">Press back again to exit</string>
+    <string name="permission_rationale">This app requires permissions to experience full features like camera uploads and notifications.</string>
+    <string name="exit_dialog_title">Exit App</string>
+    <string name="exit_dialog_message">Are you sure you want to exit?</string>
+    <string name="exit_dialog_yes">Yes</string>
+    <string name="exit_dialog_no">No</string>
+</resources>

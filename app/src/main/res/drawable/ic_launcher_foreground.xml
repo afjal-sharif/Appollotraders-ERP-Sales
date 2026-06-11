@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    
+    <!-- Outer gold circle -->
+    <path
+        android:strokeColor="#E8C96F"
+        android:strokeWidth="1.5"
+        android:pathData="M54,16 A38,38 0 1,0 54,92 A38,38 0 1,0 54,16 Z" />
+
+    <!-- Top Left Gold Pyramid Facet -->
+    <path
+        android:fillColor="#E8C96F"
+        android:pathData="M 54,28 L 32,40 L 54,52 Z" />
+
+    <!-- Top Right Dark Blue/Grey Pyramid Facet -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M 54,28 L 76,40 L 54,52 Z" />
+
+    <!-- Left Facet (White) featuring the A -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 32,40 L 54,52 L 54,80 L 32,68 Z" />
+
+    <!-- Isometric A Cutout (Dark Blue) -->
+    <path
+        android:fillColor="#0B2043"
+        android:pathData="M 38,65 L 43,48 L 48,65 L 45,65 L 44,60 L 42,60 L 41,65 Z M 43,53 L 42.5,57 L 43.5,57 Z" />
+
+    <!-- Right Facet (Gold/Bronze) -->
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M 54,52 L 76,40 L 76,68 L 54,80 Z" />
+
+    <!-- Isometric T (White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 60,49 L 71,43 L 72,46 L 67,49 L 67,69 L 64,71 L 64,51 L 60,53 Z" />
+
+</vector>

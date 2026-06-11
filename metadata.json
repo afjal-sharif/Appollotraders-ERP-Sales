@@ -1,0 +1,6 @@
+{
+  "name": "Appollo-Sales",
+  "description": "Android WebView wrapper for Appollo-Sales",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
