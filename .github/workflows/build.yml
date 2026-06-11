@@ -1,0 +1,56 @@
+name: Android CI/CD
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Generate Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.5
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
+
+    - name: Upload Debug APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
+
+    # For Release APK build, uncomment the following after setting up Keystore in GitHub Secrets
+    # - name: Build Release APK
+    #   run: ./gradlew assembleRelease
+    
+    # - name: Sign Release APK
+    #   uses: r0adkll/sign-android-release@v1
+    #   with:
+    #     releaseDirectory: app/build/outputs/apk/release
+    #     signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+    #     alias: ${{ secrets.ALIAS }}
+    #     keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+    #     keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+    # - name: Upload Release APK
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: app-release-signed
+    #     path: app/build/outputs/apk/release/*-signed.apk
